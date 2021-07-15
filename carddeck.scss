@@ -1,0 +1,63 @@
+.carddeck {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .card {
+    .cardimg {
+      overflow: hidden;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #888;
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.hidden {
+      display: none !important;
+    }
+    @for $i from 0 through 3 {
+      &.card#{$i} {
+        top: -#{4 * (3-$i)}px;
+        left: #{2 * (3-$i)}px;
+        z-index: #{3-$i};
+      }
+    }
+    &.card0.floating {
+      left: 4px;
+      top: -6px;
+    }
+    &.card0.animating {
+      transition: margin-left 0.3s, margin-top 0.3s;
+    }
+    .gamelabel {
+      bottom: 9%;
+      right: -3%;
+      z-index: 3;
+      position: absolute;
+      width: 45%;
+      .text {
+        position: absolute;
+        top: 43%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 4.5vw;
+        @media (min-width: 768px) and (min-height: 768px) {
+          font-size: 3.5vw;
+        }
+        @media (orientation: landscape) {
+          font-size: 4vh;
+          @media (min-width: 768px) and (min-height: 768px) {
+            top: 45%;
+            font-size: 3.5vh;
+          }
+        }
+      }
+    }
+  }
+}

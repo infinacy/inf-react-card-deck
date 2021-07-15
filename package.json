@@ -1,0 +1,19 @@
+{
+  "name": "inf-react-card-deck",
+  "version": "1.0.0",
+  "description": "React js Tinder like card deck",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "card deck",
+    "react card deck",
+    "tinder like card deck"
+  ],
+  "author": "nazmul@infinacy.com",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
