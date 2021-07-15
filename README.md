@@ -6,20 +6,20 @@ This is the alpha version. Detailed documentation and more customization options
 
   ```
 <InfCardDeck
-  cards={arrayOfCardObjects}
-  renderCard={CustomCardComponent}
-  onSwipeStart={onSwipeStart}
-  onSwipeLeftStart={onSwipeLeftStart}
-  onSwipeRightStart={onSwipeRightStart}
-  onSwipeUpStart={onSwipeUpStart}
-  onSwipeDownStart={onSwipeDownStart}
-  onSwipedLeft={onSwipedLeft}
-  onSwipedRight={onSwipedRight}
-  onSwipedUp={onSwipedUp}
-  onSwipedDown={onSwipedDown}
-  onSwiped={onSwiped}
-  swipesEnabled={["up", "left", "right", "down"]}
-  notifyToReload={loadMoreGames}
-  notifyThreshold={2}
+    cards={arrayOfCardObjects}
+    renderCard={CustomCardComponent}
+    onSwipeStart={onSwipeStart}
+    onSwipeLeftStart={onSwipeLeftStart}
+    onSwipeRightStart={onSwipeRightStart}
+    onSwipeUpStart={onSwipeUpStart}
+    onSwipeDownStart={onSwipeDownStart}
+    onSwipedLeft={onSwipedLeft}
+    onSwipedRight={onSwipedRight}
+    onSwipedUp={onSwipedUp}
+    onSwipedDown={onSwipedDown}
+    onSwiped={onSwiped}
+    swipesEnabled={["up", "left", "right", "down"]}
+    notifyToReload={loadMoreGames}
+    notifyThreshold={2}
   />
 ```
