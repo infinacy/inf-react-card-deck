@@ -52,40 +52,40 @@ export default function CardDeck(props) {
     setSwipeDirection(direction);
   };
 
-  const onSwipedStart = () => {
-    if (props.onSwipedStart) {
-      props.onSwipedStart(currentCardIndex);
+  const onSwipeStart = () => {
+    if (props.onSwipeStart) {
+      props.onSwipeStart(currentCardIndex);
     }
   };
-  const onSwipedLeftStart = () => {
+  const onSwipeLeftStart = () => {
     if (swipesEnabled.indexOf("left") !== -1) {
       setSwipeDirectionAll("left");
-      if (props.onSwipedLeftStart) {
-        props.onSwipedLeftStart(currentCardIndex);
+      if (props.onSwipeLeftStart) {
+        props.onSwipeLeftStart(currentCardIndex);
       }
     }
   };
-  const onSwipedRightStart = () => {
+  const onSwipeRightStart = () => {
     if (swipesEnabled.indexOf("right") !== -1) {
       setSwipeDirectionAll("right");
-      if (props.onSwipedRightStart) {
-        props.onSwipedRightStart(currentCardIndex);
+      if (props.onSwipeRightStart) {
+        props.onSwipeRightStart(currentCardIndex);
       }
     }
   };
-  const onSwipedUpStart = () => {
+  const onSwipeUpStart = () => {
     if (swipesEnabled.indexOf("up") !== -1) {
       setSwipeDirectionAll("up");
-      if (props.onSwipedUpStart) {
-        props.onSwipedUpStart(currentCardIndex);
+      if (props.onSwipeUpStart) {
+        props.onSwipeUpStart(currentCardIndex);
       }
     }
   };
-  const onSwipedDownStart = () => {
+  const onSwipeDownStart = () => {
     if (swipesEnabled.indexOf("down") !== -1) {
       setSwipeDirectionAll("down");
-      if (props.onSwipedDownStart) {
-        props.onSwipedDownStart(currentCardIndex);
+      if (props.onSwipeDownStart) {
+        props.onSwipeDownStart(currentCardIndex);
       }
     }
   };
@@ -241,7 +241,7 @@ export default function CardDeck(props) {
         var height = $(".carddeck").height();
         var moved = false;
         if (Math.abs(xMoveAmount) > 3 || Math.abs(yMoveAmount) > 3) {
-          onSwipedStart();
+          onSwipeStart();
         }
         if (
           Math.abs(xMoveAmount) > width * moveHorizontalThreshold ||
@@ -249,15 +249,15 @@ export default function CardDeck(props) {
         ) {
           if (Math.abs(xMoveAmount) > width * moveHorizontalThreshold) {
             if (xMoveAmount < 0) {
-              onSwipedLeftStart();
+              onSwipeLeftStart();
             } else {
-              onSwipedRightStart();
+              onSwipeRightStart();
             }
           } else if (Math.abs(yMoveAmount) > height * moveVerticalThreshold) {
             if (yMoveAmount < 0) {
-              onSwipedUpStart();
+              onSwipeUpStart();
             } else {
-              onSwipedDownStart();
+              onSwipeDownStart();
             }
           }
         } else {
