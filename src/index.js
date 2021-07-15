@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from "react";
 import $ from "jquery";
 import "./carddeck.scss";
 
-export default function CardDeck(props) {
+export default function InfCardDeck(props) {
   var clicked = false;
   var touched = false;
   var swipeDirectionTmp = null;

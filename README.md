@@ -2,16 +2,17 @@
 
 This is the alpha version. Detailed documentation and more customization options will be added eventually.
 
-#How to use
+### How to use
 
+  ```
 <InfCardDeck
   cards={arrayOfCardObjects}
   renderCard={CustomCardComponent}
   onSwipeStart={onSwipeStart}
-  onSwipedLeftStart={onSwipedLeftStart}
-  onSwipedRightStart={onSwipedRightStart}
-  onSwipedUpStart={onSwipedUpStart}
-  onSwipedDownStart={onSwipedDownStart}
+  onSwipeLeftStart={onSwipeLeftStart}
+  onSwipeRightStart={onSwipeRightStart}
+  onSwipeUpStart={onSwipeUpStart}
+  onSwipeDownStart={onSwipeDownStart}
   onSwipedLeft={onSwipedLeft}
   onSwipedRight={onSwipedRight}
   onSwipedUp={onSwipedUp}
@@ -20,4 +21,5 @@ This is the alpha version. Detailed documentation and more customization options
   swipesEnabled={["up", "left", "right", "down"]}
   notifyToReload={loadMoreGames}
   notifyThreshold={2}
-/>
+  />
+```
